@@ -10,7 +10,6 @@
 		BDE055C527BA5AFC008859F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE055C427BA5AFC008859F9 /* AppDelegate.swift */; };
 		BDE055C727BA5AFC008859F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE055C627BA5AFC008859F9 /* SceneDelegate.swift */; };
 		BDE055C927BA5AFC008859F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE055C827BA5AFC008859F9 /* ViewController.swift */; };
-		BDE055CC27BA5AFC008859F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE055CA27BA5AFC008859F9 /* Main.storyboard */; };
 		BDE055CE27BA5AFD008859F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDE055CD27BA5AFD008859F9 /* Assets.xcassets */; };
 		BDE055D127BA5AFD008859F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE055CF27BA5AFD008859F9 /* LaunchScreen.storyboard */; };
 		BDE055E027BA5B3E008859F9 /* MusicPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE055DA27BA5B3E008859F9 /* MusicPresenter.swift */; };
@@ -25,6 +24,18 @@
 		BDE055F027BA65C7008859F9 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE055EF27BA65C7008859F9 /* Player.swift */; };
 		BDE055F327BA67A5008859F9 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BDE055F227BA67A5008859F9 /* music.mp3 */; };
 		BDE055F527BA6804008859F9 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE055F427BA6804008859F9 /* Icons.swift */; };
+		BDE055FE27BA935E008859F9 /* NewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE055F827BA935E008859F9 /* NewsPresenter.swift */; };
+		BDE055FF27BA935E008859F9 /* NewsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE055F927BA935E008859F9 /* NewsRouter.swift */; };
+		BDE0560027BA935E008859F9 /* NewsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE055FA27BA935E008859F9 /* NewsModels.swift */; };
+		BDE0560127BA935E008859F9 /* NewsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE055FB27BA935E008859F9 /* NewsInteractor.swift */; };
+		BDE0560227BA935E008859F9 /* NewsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE055FC27BA935E008859F9 /* NewsProtocol.swift */; };
+		BDE0560327BA935E008859F9 /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE055FD27BA935E008859F9 /* NewsVC.swift */; };
+		BDE0560627BA9AAE008859F9 /* MusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE0560527BA9AAE008859F9 /* MusicManager.swift */; };
+		BDE0560827BACDEF008859F9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE0560727BACDEF008859F9 /* APIManager.swift */; };
+		BDE0560A27BAEB36008859F9 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE0560927BAEB36008859F9 /* NewsCell.swift */; };
+		BDE0560D27BAEB6A008859F9 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE0560C27BAEB6A008859F9 /* Identifier.swift */; };
+		BDE0560F27BAED03008859F9 /* Extension + UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE0560E27BAED03008859F9 /* Extension + UIImageView.swift */; };
+		BDE0561127BAEF30008859F9 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE0561027BAEF30008859F9 /* CustomImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +43,6 @@
 		BDE055C427BA5AFC008859F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDE055C627BA5AFC008859F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BDE055C827BA5AFC008859F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BDE055CB27BA5AFC008859F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BDE055CD27BA5AFD008859F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDE055D027BA5AFD008859F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDE055D227BA5AFD008859F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +58,18 @@
 		BDE055EF27BA65C7008859F9 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		BDE055F227BA67A5008859F9 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		BDE055F427BA6804008859F9 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		BDE055F827BA935E008859F9 /* NewsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPresenter.swift; sourceTree = "<group>"; };
+		BDE055F927BA935E008859F9 /* NewsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRouter.swift; sourceTree = "<group>"; };
+		BDE055FA27BA935E008859F9 /* NewsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModels.swift; sourceTree = "<group>"; };
+		BDE055FB27BA935E008859F9 /* NewsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsInteractor.swift; sourceTree = "<group>"; };
+		BDE055FC27BA935E008859F9 /* NewsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsProtocol.swift; sourceTree = "<group>"; };
+		BDE055FD27BA935E008859F9 /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
+		BDE0560527BA9AAE008859F9 /* MusicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicManager.swift; sourceTree = "<group>"; };
+		BDE0560727BACDEF008859F9 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		BDE0560927BAEB36008859F9 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		BDE0560C27BAEB6A008859F9 /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
+		BDE0560E27BAED03008859F9 /* Extension + UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIImageView.swift"; sourceTree = "<group>"; };
+		BDE0561027BAEF30008859F9 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,11 +106,11 @@
 				BDE055E827BA5FD8008859F9 /* Extensions */,
 				BDE055E727BA5FCF008859F9 /* Utils */,
 				BDE055E627BA5CCB008859F9 /* Core */,
+				BDE0560427BA9A85008859F9 /* Commons */,
 				BDE055D827BA5B22008859F9 /* Modules */,
 				BDE055C427BA5AFC008859F9 /* AppDelegate.swift */,
 				BDE055C627BA5AFC008859F9 /* SceneDelegate.swift */,
 				BDE055C827BA5AFC008859F9 /* ViewController.swift */,
-				BDE055CA27BA5AFC008859F9 /* Main.storyboard */,
 				BDE055CD27BA5AFD008859F9 /* Assets.xcassets */,
 				BDE055CF27BA5AFD008859F9 /* LaunchScreen.storyboard */,
 				BDE055D227BA5AFD008859F9 /* Info.plist */,
@@ -99,8 +121,8 @@
 		BDE055D827BA5B22008859F9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BDE055F727BA9342008859F9 /* News */,
 				BDE055D927BA5B29008859F9 /* Music */,
-				BDE055EF27BA65C7008859F9 /* Player.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -121,6 +143,7 @@
 		BDE055E627BA5CCB008859F9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				BDE0560727BACDEF008859F9 /* APIManager.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -131,6 +154,9 @@
 				BDE055E927BA600B008859F9 /* Configurable.swift */,
 				BDE055EB27BA61D5008859F9 /* Colors.swift */,
 				BDE055F427BA6804008859F9 /* Icons.swift */,
+				BDE0560527BA9AAE008859F9 /* MusicManager.swift */,
+				BDE0560C27BAEB6A008859F9 /* Identifier.swift */,
+				BDE0561027BAEF30008859F9 /* CustomImageView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -139,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				BDE055ED27BA6250008859F9 /* Extension + UIColor.swift */,
+				BDE0560E27BAED03008859F9 /* Extension + UIImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -149,6 +176,36 @@
 				BDE055F227BA67A5008859F9 /* music.mp3 */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		BDE055F727BA9342008859F9 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				BDE0560B27BAEB3A008859F9 /* views */,
+				BDE055F827BA935E008859F9 /* NewsPresenter.swift */,
+				BDE055F927BA935E008859F9 /* NewsRouter.swift */,
+				BDE055FA27BA935E008859F9 /* NewsModels.swift */,
+				BDE055FB27BA935E008859F9 /* NewsInteractor.swift */,
+				BDE055FC27BA935E008859F9 /* NewsProtocol.swift */,
+				BDE055FD27BA935E008859F9 /* NewsVC.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		BDE0560427BA9A85008859F9 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				BDE055EF27BA65C7008859F9 /* Player.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		BDE0560B27BAEB3A008859F9 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				BDE0560927BAEB36008859F9 /* NewsCell.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +269,6 @@
 				BDE055F327BA67A5008859F9 /* music.mp3 in Resources */,
 				BDE055D127BA5AFD008859F9 /* LaunchScreen.storyboard in Resources */,
 				BDE055CE27BA5AFD008859F9 /* Assets.xcassets in Resources */,
-				BDE055CC27BA5AFC008859F9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,34 +279,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDE0560027BA935E008859F9 /* NewsModels.swift in Sources */,
 				BDE055F527BA6804008859F9 /* Icons.swift in Sources */,
+				BDE0560227BA935E008859F9 /* NewsProtocol.swift in Sources */,
 				BDE055EA27BA600B008859F9 /* Configurable.swift in Sources */,
+				BDE0560A27BAEB36008859F9 /* NewsCell.swift in Sources */,
+				BDE0560827BACDEF008859F9 /* APIManager.swift in Sources */,
 				BDE055EC27BA61D5008859F9 /* Colors.swift in Sources */,
 				BDE055E027BA5B3E008859F9 /* MusicPresenter.swift in Sources */,
+				BDE0560127BA935E008859F9 /* NewsInteractor.swift in Sources */,
 				BDE055E427BA5B3E008859F9 /* MusicProtocol.swift in Sources */,
+				BDE0560627BA9AAE008859F9 /* MusicManager.swift in Sources */,
 				BDE055C927BA5AFC008859F9 /* ViewController.swift in Sources */,
+				BDE0560327BA935E008859F9 /* NewsVC.swift in Sources */,
 				BDE055F027BA65C7008859F9 /* Player.swift in Sources */,
 				BDE055EE27BA6250008859F9 /* Extension + UIColor.swift in Sources */,
 				BDE055E327BA5B3E008859F9 /* MusicInteractor.swift in Sources */,
+				BDE055FF27BA935E008859F9 /* NewsRouter.swift in Sources */,
 				BDE055C527BA5AFC008859F9 /* AppDelegate.swift in Sources */,
 				BDE055E527BA5B3E008859F9 /* MusicVC.swift in Sources */,
+				BDE0560F27BAED03008859F9 /* Extension + UIImageView.swift in Sources */,
 				BDE055C727BA5AFC008859F9 /* SceneDelegate.swift in Sources */,
+				BDE055FE27BA935E008859F9 /* NewsPresenter.swift in Sources */,
 				BDE055E127BA5B3E008859F9 /* MusicRouter.swift in Sources */,
+				BDE0560D27BAEB6A008859F9 /* Identifier.swift in Sources */,
 				BDE055E227BA5B3E008859F9 /* MusicModels.swift in Sources */,
+				BDE0561127BAEF30008859F9 /* CustomImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BDE055CA27BA5AFC008859F9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BDE055CB27BA5AFC008859F9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BDE055CF27BA5AFD008859F9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

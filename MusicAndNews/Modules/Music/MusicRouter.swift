@@ -31,4 +31,11 @@ public class MusicRouter: MusicPresenterToRouterProtocol{
         
         return view
     }
+    
+    func goToNews(isPlaying: Bool, from: MusicVC) {
+        let vc = NewsRouter().createModule()
+        vc.musicStatus = isPlaying
+        vc.delegate = from
+        from.navigationController?.pushViewController(vc, animated: true)
+    }
 }

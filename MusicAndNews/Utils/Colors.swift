@@ -11,4 +11,5 @@ public enum Color {
     static let background = UIColor.init("#FFFFFF");
     static let foreground = UIColor.init("#000000");
     static let playerBackground = UIColor.init("#eeeeee");
+    static let textGray = UIColor.init("#808080");
 }

@@ -9,6 +9,11 @@ import UIKit
 class MusicVC: UIViewController {
     var presentor: MusicViewToPresenterProtocol?
     public var delegate: MusicDelegate?
+    var isPlaying: Bool = false {
+        didSet {
+            self.player.configureUI(status: isPlaying)
+        }
+    }
     
     let label1: UILabel = UILabel()
         .configure { v in
@@ -30,7 +35,16 @@ class MusicVC: UIViewController {
             v.translatesAutoresizingMaskIntoConstraints = false
         }
     
-    let player: Player = Player()
+    let btnNews: UIButton = UIButton()
+        .configure { v in
+            v.setTitle("SELECT NEWS", for: .normal)
+            v.backgroundColor = .systemBlue
+            v.tintColor = .white
+            v.translatesAutoresizingMaskIntoConstraints = false
+            v.addTarget(self, action: #selector(selectNewsTapped), for: .touchUpInside)
+        }
+    
+    let player: PlayerView = PlayerView()
         .configure { v in
             v.translatesAutoresizingMaskIntoConstraints = false
         }
@@ -43,17 +57,32 @@ class MusicVC: UIViewController {
         player.delegate = self
     }
     
+    @objc func selectNewsTapped() {
+        presentor?.goToNews(isPlaying: isPlaying, from: self)
+    }
     
+    func configurePlayerStatus(status: Bool) {
+        if status {
+            self.label2.text = "Music is playing.. Enjoy!!"
+            self.isPlaying = true
+        } else {
+            self.label2.text = "Ooops... Music stop playing"
+            self.isPlaying = false
+        }
+        
+    }
 
 }
 
 extension MusicVC: PlayerDelegate {
     func musicPlayer(isPlaying: Bool) {
-        if isPlaying {
-            self.label2.text = "Music is playing.. Enjoy!!"
-        } else {
-            self.label2.text = "Ooops... Music stop playing"
-        }
+        configurePlayerStatus(status: isPlaying)
+    }
+}
+
+extension MusicVC: NewsDelegate {
+    func music(status: Bool) {
+        configurePlayerStatus(status: status)
     }
 }
 
@@ -72,6 +101,12 @@ extension MusicVC {
         label2.topAnchor.constraint(equalTo: label1.bottomAnchor, constant: 100).isActive = true
         label2.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         label2.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
+        
+        self.view.addSubview(btnNews)
+        btnNews.topAnchor.constraint(equalTo: label2.bottomAnchor, constant: 50).isActive = true
+        btnNews.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
+        btnNews.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
+        btnNews.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         self.view.addSubview(player)
         player.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true

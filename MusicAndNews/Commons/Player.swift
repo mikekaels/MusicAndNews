@@ -12,10 +12,14 @@ protocol PlayerDelegate {
     func musicPlayer(isPlaying: Bool)
 }
 
-class Player: UIView {
+class PlayerView: UIView {
     
     var audio: AVAudioPlayer?
-    var isPlaying: Bool = false
+    var isPlaying: Bool = false {
+        didSet {
+            configureUI(status: isPlaying)
+        }
+    }
     
     var delegate: PlayerDelegate?
     
@@ -55,10 +59,9 @@ class Player: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    
 }
 
-extension Player {
+extension PlayerView {
     func setupUI() {
         self.backgroundColor = Color.playerBackground
         
@@ -74,44 +77,36 @@ extension Player {
     }
     
     @objc func playerTapped() {
-        let path = Bundle.main.path(forResource: "music.mp3", ofType:nil)!
-        let url = URL(fileURLWithPath: path)
-        
-        do {
-            audio = try AVAudioPlayer(contentsOf: url)
-            if isPlaying {
-                musicStop()
-            } else {
-                musicStart()
-            }
-            
-        } catch {
-            // couldn't load file :(
-            fatalError("couldn't load file :(")
+        if MusicManager.shared.isPlaying {
+            isPlaying = false
+            delegate?.musicPlayer(isPlaying: false)
+        } else {
+            isPlaying = true
+            delegate?.musicPlayer(isPlaying: true)
         }
+        
+        MusicManager.shared.player(path: "music.mp3")
     }
     
     func musicStart() {
-        print("▶️")
-        isPlaying = true
-        audio?.play()
         btnPlay.tintColor = .systemGray
         btnPause.tintColor = .systemBlue
         btnPlay.isUserInteractionEnabled = false
         btnPause.isUserInteractionEnabled = true
-        delegate?.musicPlayer(isPlaying: true)
     }
     
     func musicStop() {
-        print("⏹")
-        isPlaying = false
-        audio?.stop()
         btnPlay.tintColor = .systemBlue
         btnPause.tintColor = .systemGray
         btnPlay.isUserInteractionEnabled = true
         btnPause.isUserInteractionEnabled = false
-        delegate?.musicPlayer(isPlaying: false)
     }
     
-    
+    func configureUI(status: Bool) {
+        if status {
+            musicStart()
+        } else {
+            musicStop()
+        }
+    }
 }

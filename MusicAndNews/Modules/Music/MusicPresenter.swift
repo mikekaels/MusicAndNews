@@ -9,7 +9,9 @@ class MusicPresenter: MusicViewToPresenterProtocol {
     var router: MusicPresenterToRouterProtocol?
     var interactor: MusicPresenterToInteractorProtocol?
     
-    
+    func goToNews(isPlaying: Bool, from: MusicVC) {
+        router?.goToNews(isPlaying: isPlaying, from: from)
+    }
 }
 
 extension MusicPresenter: MusicInteractorToPresenterProtocol {

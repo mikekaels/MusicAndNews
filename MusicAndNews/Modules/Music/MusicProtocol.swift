@@ -12,10 +12,13 @@ protocol MusicViewToPresenterProtocol: AnyObject {
     var view: MusicPresenterToViewProtocol? { get set }
     var interactor: MusicPresenterToInteractorProtocol? { get set }
     var router: MusicPresenterToRouterProtocol? { get set }
+    
+    func goToNews(isPlaying: Bool ,from: MusicVC)
 }
 
 protocol MusicPresenterToRouterProtocol: AnyObject {
     func createModule() -> MusicVC
+    func goToNews(isPlaying: Bool, from: MusicVC)
 }
 
 protocol MusicPresenterToViewProtocol: AnyObject {
